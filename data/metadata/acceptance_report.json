@@ -1,0 +1,53 @@
+{
+  "report_date": "2026-05-20 17:44:00",
+  "status": "rejected",
+  "quality_level": "unacceptable",
+  "overall_score": 0.0,
+  "metrics": [
+    {
+      "metric_name": "Total Characters",
+      "value": 4,
+      "threshold": 500,
+      "status": "unacceptable",
+      "weight": 2.0
+    },
+    {
+      "metric_name": "Humanoid Ratio",
+      "value": 0.0,
+      "threshold": 0.5,
+      "status": "poor",
+      "weight": 1.5
+    },
+    {
+      "metric_name": "Pre-rigged Ratio",
+      "value": 0.0,
+      "threshold": 0.7,
+      "status": "poor",
+      "weight": 1.5
+    },
+    {
+      "metric_name": "Annotation Completeness",
+      "value": 0.0,
+      "threshold": 0.95,
+      "status": "poor",
+      "weight": 2.0
+    },
+    {
+      "metric_name": "Average Quality Score",
+      "value": 0.0,
+      "threshold": 0.8,
+      "status": "poor",
+      "weight": 2.0
+    }
+  ],
+  "issues": [
+    "Insufficient characters: 4 < 500",
+    "Low humanoid ratio: 0.0% < 50.0%",
+    "Incomplete annotations: 0.0% < 95.0%",
+    "Low quality score: 0.00 < 0.80"
+  ],
+  "recommendations": [
+    "Consider increasing pre-rigged characters for better training",
+    "Dataset requires significant improvements before acceptance"
+  ]
+}

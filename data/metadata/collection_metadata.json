@@ -1,0 +1,38 @@
+{
+  "collection_date": "2026-05-20 17:43:53",
+  "total_characters": 4,
+  "characters": [
+    {
+      "character_id": "MIXAMO_001",
+      "name": "Mixamo Male Warrior",
+      "type": "humanoid_male",
+      "source": "mixamo",
+      "file_path": "/path/to/mixamo_warrior.fbx",
+      "rig_status": "rigged"
+    },
+    {
+      "character_id": "MIXAMO_002",
+      "name": "Mixamo Female Archer",
+      "type": "humanoid_female",
+      "source": "mixamo",
+      "file_path": "/path/to/mixamo_archer.fbx",
+      "rig_status": "rigged"
+    },
+    {
+      "character_id": "SKETCHFAB_001",
+      "name": "Fantasy Orc",
+      "type": "monster",
+      "source": "sketchfab",
+      "file_path": "/path/to/orc.glb",
+      "rig_status": "unrigged"
+    },
+    {
+      "character_id": "HUMANS_001",
+      "name": "Human Dataset Sample 1",
+      "type": "humanoid_male",
+      "source": "humans",
+      "file_path": "/path/to/humans_sample.glb",
+      "rig_status": "rigged"
+    }
+  ]
+}
