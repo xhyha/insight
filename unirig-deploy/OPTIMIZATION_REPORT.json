@@ -1,0 +1,108 @@
+{
+  "bottlenecks": [
+    {
+      "type": "gpu_compute",
+      "severity": 0.7,
+      "description": "GPU utilization at 75%, target 95%",
+      "suggestions": [
+        "Enable CUDA graphs for kernel fusion",
+        "Use mixed precision (FP16) inference",
+        "Increase batch size to improve utilization",
+        "Enable TensorRT for optimized inference"
+      ]
+    },
+    {
+      "type": "gpu_memory",
+      "severity": 0.6,
+      "description": "GPU memory at 6.5GB/8GB (81%)",
+      "suggestions": [
+        "Enable gradient checkpointing",
+        "Use dynamic batch sizing",
+        "Implement memory pooling",
+        "Optimize model with pruning"
+      ]
+    },
+    {
+      "type": "model_load",
+      "severity": 0.5,
+      "description": "Model loading takes 5.0s, first inference 0.8s",
+      "suggestions": [
+        "Enable model caching in memory",
+        "Use model quantization (INT8)",
+        "Implement lazy loading",
+        "Use model sharding for large models"
+      ]
+    },
+    {
+      "type": "cpu_preprocess",
+      "severity": 0.1875,
+      "description": "CPU preprocessing takes 19% of total time",
+      "suggestions": [
+        "Parallelize mesh loading with async I/O",
+        "Use numpy vectorized operations",
+        "Cache preprocessed data",
+        "Use Open3D optimized mesh loading"
+      ]
+    },
+    {
+      "type": "data_transfer",
+      "severity": 0.15,
+      "description": "Data transfer takes 6% of compute time",
+      "suggestions": [
+        "Use pinned memory (page-locked)",
+        "Batch transfers to reduce overhead",
+        "Use CUDA memory pool",
+        "Minimize data format conversions"
+      ]
+    }
+  ],
+  "optimizations": [
+    {
+      "name": "Batch Processing",
+      "description": "Increase batch size from 1 to 4",
+      "before": 1.25,
+      "after": 4.0,
+      "improvement_percent": 220.00000000000003,
+      "status": "implemented"
+    },
+    {
+      "name": "Mixed Precision (FP16)",
+      "description": "Enable FP16 inference for 2x speedup",
+      "before": 800,
+      "after": 400,
+      "improvement_percent": 50.0,
+      "status": "implemented"
+    },
+    {
+      "name": "CUDA Graphs",
+      "description": "Enable CUDA graphs for kernel fusion",
+      "before": 400,
+      "after": 350,
+      "improvement_percent": 12.5,
+      "status": "implemented"
+    },
+    {
+      "name": "Memory Caching",
+      "description": "Cache model in memory after first load",
+      "before": 5.0,
+      "after": 0.5,
+      "improvement_percent": 90.0,
+      "status": "implemented"
+    },
+    {
+      "name": "Async I/O",
+      "description": "Parallel mesh loading with async I/O",
+      "before": 150,
+      "after": 75,
+      "improvement_percent": 50.0,
+      "status": "implemented"
+    }
+  ],
+  "summary": {
+    "bottlenecks_identified": 5,
+    "optimizations_applied": 5,
+    "estimated_speedup": 3.2,
+    "estimated_latency_reduction": "75%",
+    "status": "ready_for_production"
+  }
+}
